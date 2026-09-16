@@ -88,6 +88,15 @@
             bindings = <&kp>, <&kp>;
         };
 
+        sh: shift_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -105,7 +114,7 @@
         base_layer {
             bindings = <
                 &kp Q       &kp W       &kp E       &kp R          &kp T        &kp Y        &kp U       &kp I       &kp O       &kp P
-                &hm LCTL A  &hm RALT S  &hm LGUI D  &hm LSFT F     &kp G        &kp H        &hm RSFT J  &hm RGUI K  &hm RALT L  &hm RCTL SEMI
+                &hm LCTL A  &hm RALT S  &hm LGUI D  &sh LSFT F     &kp G        &kp H        &sh RSFT J  &hm RGUI K  &hm RALT L  &hm RCTL SEMI
                 &kp Z       &kp X       &kp C       &lt NAV V      &kp B        &kp N        &lt MED M   &kp COMMA   &kp DOT     &kp SLASH
                                                     &kp ESC        &lt NUM SPC  &lt SYM BSPC &kp ENTER
             >;
