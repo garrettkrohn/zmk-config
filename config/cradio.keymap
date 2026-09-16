@@ -34,13 +34,6 @@
             bindings = <&kp ENTER>;
         };
 
-        // S+F = tab
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <11 13>;
-            bindings = <&kp TAB>;
-        };
-
         // J+L = escape
         combo_escape {
             timeout-ms = <50>;
@@ -62,16 +55,9 @@
             bindings = <&kp UNDER>;
         };
 
-        // E+R+U+I = bootloader
-        combo_boot {
-            timeout-ms = <50>;
-            key-positions = <2 3 6 7>;
-            bindings = <&bootloader>;
-        };
-
         // q 
         combo_q {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <10 11>;
             bindings = <&kp Q>;
         };
@@ -83,7 +69,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <140>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <50>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
