@@ -69,8 +69,8 @@
             bindings = <&bootloader>;
         };
 
-        // E+R+U+I = bootloader
-        combo_boot {
+        // q 
+        combo_q {
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <Q>;
