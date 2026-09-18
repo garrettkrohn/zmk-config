@@ -68,20 +68,6 @@
             key-positions = <18 19>;
             bindings = <&kp P>;
         };
-
-        // Q+W+E = bootloader (left half)
-        combo_bootloader_left {
-            timeout-ms = <50>;
-            key-positions = <0 1 2>;
-            bindings = <&bootloader>;
-        };
-
-        // I+O+P = bootloader (right half)
-        combo_bootloader_right {
-            timeout-ms = <50>;
-            key-positions = <7 8 9>;
-            bindings = <&bootloader>;
-        };
     };
 
     behaviors {
@@ -90,7 +76,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <140>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <60>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
